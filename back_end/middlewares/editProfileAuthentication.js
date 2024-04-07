@@ -4,19 +4,8 @@ require('colors')
 const editProfileAuthentication = async (req, res, next) => {
     try
     {
-        // const {name, username} = req.body.jsonData
-        // const image = req.file
-        // const image = req.file
+       
         const form = req.body.jsonData
-        // const data = JSON.parse(form)
-        // const {name, username} = data
-
-
-        // console.log(form, "--form")
-        // console.log(image, "--File")
-        // console.log(data, "--data")
-        // console.log(name, username, "--data")
-        // console.log(username.match(/.go/) ? "true" : "false", "--match")
 
         const data = JSON.parse(form)
         const {name, username} = data

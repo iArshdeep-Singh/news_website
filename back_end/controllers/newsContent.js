@@ -9,23 +9,16 @@ const newsContent = async (req, res) => {
     {
         const {url} = req.body
 
-        // console.log(url, "--URL")
-
         const response = await axios.get(url)
 
-        // console.log(response, "--R")
         const htmlContent = response.data
 
 
         const dom = new JSDOM(htmlContent);
 
-        // console.log(dom, "--D")
-
-        // const articleContent = await dom.window.document.querySelector('article')?.textContent.trim()
 
         let article = new Readability(dom.window.document).parse()
 
-        // console.log(`${article.textContent}`.rainbow, "--C")
 
         if (!url)
         {

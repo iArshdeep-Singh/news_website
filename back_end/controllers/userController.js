@@ -140,8 +140,6 @@ const uploadPhoto = async (req, res) => {
 
         const user = await User.findById(id).select('-password')
 
-        console.log(user)
-
         // delete image file in folder
         fs.unlinkSync(req.file.path)
 
@@ -171,11 +169,7 @@ const userData = async (req, res) => {
     {
         const token = req.params.id
 
-        console.log(token, "--token")
-
         const {id} = jwt.verify(token, key)
-
-        console.log(id, "--id")
 
         const {image, name, username, email, createdAt} = await User.findById(id).select('-password')
 
@@ -189,8 +183,6 @@ const userData = async (req, res) => {
             imageString,
             createdAt
         }
-
-        console.log(user, "--user")
 
         if (user)
         {
@@ -220,11 +212,6 @@ const update = async (req, res) => {
     {
         const token = req.params.id
         const form = req.body.jsonData
-        // const image = req.file
-        // const {name, username} = req.body.formData
-        // const image = fs.readFileSync(req.file?.path)
-
-        // console.log(image, "--image")
 
         const data = JSON.parse(form)
         const {name, username} = data
@@ -310,14 +297,8 @@ const deleteProfile = async (req, res) => {
 
         const {id} = jwt.verify(token, key)
 
-        console.log(token, "--token")
-        console.log(password, "--password")
-        console.log(id, "--id")
-
         const user = await User.findById(id)
         const passwordCompare = await bcrypt.compare(password, user.password)
-
-        console.log(passwordCompare, "---comp")
 
         if (passwordCompare)
         {
@@ -435,8 +416,6 @@ const verifyOTP = async (req, res) => {
         const {email} = await User.findById(id)
         const {otp, otp_expiry} = await OTP.findOne({email})
 
-        console.log(otp, otp_expiry, otp_string, "--OTP")
-
         if (otp_expiry < new Date())
         {
             return res.status(200).send({
@@ -496,8 +475,6 @@ const forgotPassword = async (req, res) => {
 
             await OTP.updateOne({email}, {$set: {otp, otp_expiry}}, {upsert: true})
 
-            console.log(otp)
-
             transporter.sendMail({
                 from: process.env.EMAIL,
                 to: email,
@@ -547,10 +524,10 @@ const forgotPasswordVerification = async (req, res) => {
 
         const {otp, otp_expiry} = await OTP.findOne({email: mail})
 
-        console.log(otp, otp_expiry, otp_string, "--OTP")
 
         if (otp_expiry < new Date())
         {
+            console.log("OTP has been expired".bgRed.white)
             return res.status(200).send({
                 success: false,
                 expired: true,
@@ -558,12 +535,14 @@ const forgotPasswordVerification = async (req, res) => {
             })
         } else if (otp !== otp_string)
         {
+            console.log("Incorrect OTP".bgRed.white)
             return res.status(200).send({
                 success: false,
                 message: "Incorrect OTP."
             })
         } else
         {
+            console.log("OTP verified successfully.".bgBlue.white)
             res.status(200).send({
                 success: true,
                 message: "OTP verified successfully."
@@ -593,8 +572,6 @@ const updatePassword = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt)
 
         const user = await User.findOne({email})
-
-        console.log(user)
 
         if (user)
         {

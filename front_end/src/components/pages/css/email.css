@@ -1,0 +1,248 @@
+#email-body {
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#email-container {
+    height: 100%;
+    width: 25%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#email-container h2 {
+    margin-bottom: 1vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    color: #01579B;
+}
+
+.email-form-group {
+    position: relative;
+    margin: 0.25vh 0;
+}
+
+.email-form-group input {
+    height: 2vw;
+    width: 25vw;
+    padding: 2.5vh 1vw;
+    font-size: 1.25vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    border: 0.125vw solid dimgray;
+    outline: none;
+    transition: 0.15s all ease;
+    user-select: none;
+}
+
+
+.email-form-group input::placeholder {
+    color: transparent;
+}
+
+.email-form-group .email-form-label {
+    padding: 0 0.125vw;
+    position: absolute;
+    top: 1.125vh;
+    left: 1vw;
+    font-size: 1.125vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+
+.email-form-group input:focus+.email-form-label,
+.email-form-group input:not(:placeholder-shown)+.email-form-label {
+    transform: translate(-0.25vw, -1.35vw);
+    color: #333;
+    background-color: white;
+    font-size: 0.95vw;
+    padding: 0 0.25vw;
+}
+
+
+#email-container button {
+    height: 3.25vw;
+    width: 25vw;
+    font-size: 1.5vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #01579B;
+    border: none;
+    cursor: pointer;
+}
+
+#email-container button:hover {
+    opacity: 0.9;
+}
+
+.validation-message {
+    padding: 0.25vh 0 0 0;
+    font-size: 0.9vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 1.25vw;
+    width: 100%;
+    color: blue;
+    overflow: hidden;
+}
+
+#email-container p {
+    margin-bottom: 2vw;
+    font-size: 1.125vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: dimgray;
+}
+
+#email-container :nth-child(5) button {
+    margin-top: 1vh;
+    font-weight: bold;
+    color: #01579B;
+    background-color: transparent;
+    border: 0.125vw solid #01579B;
+}
+
+#email-container :nth-child(5) button:hover {
+    background-color: whitesmoke;
+}
+
+/* -----------------------------------Responsive------------------------------------ */
+@media (max-width: 768px) {
+
+    #email-container {
+        width: 75%;
+        gap: 1.5vh;
+    }
+
+    #back {
+        position: absolute;
+        top: 0vh;
+        left: 2vw;
+        padding: 0vh 2.5vw;
+        font-size: 5.75vw;
+    }
+
+    #email-container h2 {
+        margin-bottom: 0vh;
+        font-size: 7vw;
+    }
+
+    .email-form-group {
+        position: relative;
+        margin: 0.25vh 0;
+    }
+
+    .email-form-group input {
+        height: 2vw;
+        width: 50vw;
+        font-size: 3.25vw;
+    }
+
+    .email-form-group .email-form-label {
+        position: absolute;
+        top: 1.125vh;
+        left: 1vw;
+        font-size: 2.75vw;
+    }
+
+    .email-form-group input:focus+.email-form-label,
+    .email-form-group input:not(:placeholder-shown)+.email-form-label {
+        transform: translate(-0.25vw, -2.75vh);
+        font-size: 2.75vw;
+    }
+
+    .email-form-group div {
+        padding: 0.25vh 0 0 0;
+        font-size: 2vw;
+        height: 2.5vw;
+        width: 50vw;
+    }
+
+
+    #email-container button {
+        height: 6.5vw;
+        width: 50vw;
+        font-size: 3.5vw;
+    }
+
+    #email-container p {
+        margin-bottom: 4.5vw;
+        font-size: 3vw;
+    }
+}
+
+/* for mobile phones */
+@media (max-width:480px) {
+
+    #email-container {
+        width: 75%;
+        gap: 1.5vh;
+        margin-top: 12vw;
+        justify-content: flex-start;
+    }
+
+    #back {
+        position: absolute;
+        top: 0vh;
+        left: 2vw;
+        padding: 0.5vh 2.75vw;
+        font-size: 5.75vw;
+    }
+
+    #email-container h2 {
+        margin-bottom: 0vh;
+        font-size: 7.5vw;
+    }
+
+    .email-form-group {
+        position: relative;
+        margin: 0.25vh 0;
+    }
+
+    .email-form-group input {
+        height: 2vw;
+        width: 75vw;
+        font-size: 5vw;
+    }
+
+    .email-form-group .email-form-label {
+        position: absolute;
+        top: 1.135vh;
+        left: 1.5vw;
+        font-size: 3.5vw;
+    }
+
+    .email-form-group input:focus+.email-form-label,
+    .email-form-group input:not(:placeholder-shown)+.email-form-label {
+        transform: translate(-0.25vw, -2.45vh);
+        font-size: 3.125vw;
+    }
+
+    #email-container button {
+        height: 10vw;
+        width: 75vw;
+        font-size: 5.25vw;
+    }
+
+    .email-form-group div {
+        padding: 0.25vh 0 0 0;
+        font-size: 3vw;
+        height: 4.25vw;
+        width: 75vw;
+    }
+
+    #email-container p {
+        margin-bottom: 12vw;
+        font-size: 4.25vw;
+    }
+}

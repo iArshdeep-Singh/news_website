@@ -1,0 +1,225 @@
+#uploadPhoto-body {
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+#uploadPhoto-body::-webkit-scrollbar {
+    display: none;
+}
+
+#back {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    padding: 0vh 1.25vw;
+    font-size: 2.25vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+}
+
+#uploadPhoto-container {
+    height: 100%;
+    width: 25%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#uploadPhoto-container p {
+    margin-bottom: 2.5vh;
+    /* text-align: left; */
+    font-size: 1.125vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: dimgray;
+}
+
+
+
+#uploadPhoto-container h2 {
+    margin-bottom: 1vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    color: #01579B;
+}
+
+#image-container {
+    position: relative;
+    margin-bottom: 2vh;
+    height: 17.5vw;
+    width: 17.5vw;
+    border: 0.125vw dashed #01579B;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+#image-container img {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #cc0000;
+}
+
+#uploadPhoto-container button {
+    height: 3.25vw;
+    width: 25vw;
+    font-size: 1.5vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #01579B;
+    border: none;
+    cursor: pointer;
+}
+
+#uploadPhoto-container button:hover {
+    opacity: 0.9;
+}
+
+#select-image {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    padding-top: 2.5vw;
+    text-align: center;
+    font-size: 1.25vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-top: 0.125vw dashed #01579B;
+    color: #01579B;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+#select-image:hover {
+    background-color: lightcyan;
+}
+
+
+#uploadPhoto-container :nth-child(5) button {
+    margin-top: 1vh;
+    font-weight: bold;
+    color: #01579B;
+    background-color: transparent;
+    border: 0.125vw solid #01579B;
+}
+
+#uploadPhoto-container :nth-child(5) button:hover {
+    background-color: whitesmoke;
+}
+
+
+/* -------------------------RESPONSIVE--------------------------- */
+@media (max-width:768px) {
+
+    #uploadPhoto-container {
+        width: 75%;
+        gap: 1vh;
+    }
+
+    #back {
+        position: absolute;
+        top: 0vh;
+        left: 2vw;
+        padding: 0vh 2.5vw;
+        font-size: 5.75vw;
+    }
+
+    #uploadPhoto-container h2 {
+        margin-bottom: 0vh;
+        font-size: 7vw;
+    }
+
+    #uploadPhoto-container p {
+        margin-bottom: 4vh;
+        font-size: 3vw;
+    }
+
+    #image-container {
+        margin-bottom: 2vh;
+        height: 50vw;
+        width: 50vw;
+        border: 0.35vw dashed #01579B;
+    }
+
+    #select-image {
+        padding-top: 7.5vw;
+        font-size: 3.25vw;
+        border-top: 0.35vw dashed #01579B;
+    }
+
+    #uploadPhoto-container button {
+        margin-top: 1.125vh;
+        height: 6.5vw;
+        width: 50vw;
+        font-size: 3.5vw;
+    }
+}
+
+
+
+/* for mobile phones */
+@media (max-width:480px) {
+    #uploadPhoto-container {
+        width: 75%;
+        gap: 1.5vh;
+        margin-top: 7.5vw;
+        justify-content: flex-start;
+    }
+
+    #back {
+        position: absolute;
+        top: 0vh;
+        left: 2vw;
+        padding: 0.5vh 2.75vw;
+        font-size: 5.75vw;
+    }
+
+    #uploadPhoto-container h2 {
+        margin-bottom: 0vh;
+        font-size: 7.5vw;
+    }
+
+    #uploadPhoto-container p {
+        margin-bottom: 4vh;
+        font-size: 4.25vw;
+    }
+
+    #image-container {
+        margin-bottom: 2vh;
+        height: 60vw;
+        width: 60vw;
+        border: 0.5vw dashed #01579B;
+    }
+
+    #select-image {
+        padding-top: 8.75vw;
+        font-size: 4.5vw;
+        border-top: 0.5vw dashed #01579B;
+    }
+
+    #uploadPhoto-container button {
+        margin-top: 1.5vh;
+        height: 10vw;
+        width: 75vw;
+        font-size: 5.25vw;
+    }
+}

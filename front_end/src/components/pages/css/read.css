@@ -1,0 +1,199 @@
+#read-container {
+    position: absolute;
+    top: 10vh;
+    height: auto;
+    width: 100%;
+    margin: 2vh 0vw 2vh 0vw;
+    padding: 0 2vw;
+}
+
+#read-container button {
+    position: fixed;
+    margin: 0 1vw 1vh 0vw;
+    padding: 0.75vh 0.75vw;
+    font-size: 1.25vw;
+    font-family: sans-serif;
+    letter-spacing: 0.075vw;
+    background-color: #01579B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#read-container img {
+    height: auto;
+    max-width: 35vw;
+    margin: 6vh 0vw -4vh 1.75vw;
+    float: right;
+}
+
+#read-container h1 {
+    position: relative;
+    top: 4.5vh;
+    margin: 2vh 0vw 2vh 0vw;
+    font-size: 3.5vw;
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
+#read-container article:nth-child(4)::first-letter {
+    font-weight: 550;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.75vw;
+    color: black;
+}
+
+#read-container article:nth-child(4) {
+    margin-bottom: 2vh;
+    font-style: italic;
+}
+
+#read-container article {
+    position: relative;
+    top: 4.5vh;
+    text-align: justify;
+    font-size: 1.75vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+#bottom {
+    width: 100%;
+}
+
+#author,
+#date {
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: right;
+    color: gray;
+}
+
+#author {
+    margin: 15vh 1vw 1vh 0vw;
+    font-size: 1.25vw;
+}
+
+#date {
+    margin: 1.5vh 1vw 2vh 0vw;
+    padding: 0vh 0vw 5vh 1vw;
+    font-size: 1.125vw;
+}
+
+#date span,
+#author span {
+    text-decoration: solid;
+    font-weight: bolder;
+    color: #cc0000;
+}
+
+
+
+
+/* -------------------------Responsive---------------------------- */
+
+@media (max-width: 768px) {
+
+    #read-container {
+        top: 7.5vh;
+        height: auto;
+        width: 100%;
+        margin: 2vh 0vw 2vh 0vw;
+        padding: 0 2vw;
+    }
+
+    #read-container button {
+        padding: 0.75vh 0.75vw;
+        font-size: 2.5vw;
+    }
+
+    #read-container img {
+        height: auto;
+        max-width: 100%;
+        margin: 6vh 0vw 0vh 1.75vw;
+    }
+
+    #read-container h1 {
+        top: 4.5vh;
+        margin: 2vh 0vw 2vh 0vw;
+        font-size: 5.75vw;
+    }
+
+    #read-container article:nth-child(4)::first-letter {
+        font-size: 4.5vw;
+    }
+
+    #read-container article {
+        top: 4vh;
+        font-size: 3.75vw;
+    }
+
+    #author {
+        font-size: 3.25vw;
+    }
+
+    #date {
+        font-size: 3.25vw;
+    }
+
+    #date span,
+    #author span {
+        text-decoration: solid;
+        font-weight: bolder;
+        color: #cc0000;
+    }
+}
+
+
+/* for mobile phones */
+@media (max-width: 480px) {
+
+    #read-container {
+        top: 7.5vh;
+        height: auto;
+        width: 100%;
+        margin: 2vh 0vw 2vh 0vw;
+        padding: 0 2vw;
+    }
+
+    #read-container button {
+        padding: 0.75vh 1vw;
+        font-size: 3.5vw;
+    }
+
+    #read-container img {
+        height: auto;
+        max-width: 100%;
+        margin: 6vh 0vw 0vh 1.75vw;
+    }
+
+    #read-container h1 {
+        top: 5.25vh;
+        margin: 2vh 0vw 4vh 0vw;
+        font-size: 7.75vw;
+    }
+
+    #read-container article:nth-child(4)::first-letter {
+        font-size: 7.75vw;
+    }
+
+    #read-container article {
+        top: 4vh;
+        font-size: 5.75vw;
+    }
+
+    #author {
+        font-size: 4.25vw;
+    }
+
+    #date {
+        font-size: 4.25vw;
+    }
+
+    #date span,
+    #author span {
+        text-decoration: solid;
+        font-weight: bolder;
+        color: #cc0000;
+    }
+}

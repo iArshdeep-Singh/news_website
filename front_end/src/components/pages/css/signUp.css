@@ -1,0 +1,335 @@
+#signup-body {
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#signup-container {
+    height: 100%;
+    width: 25%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#back {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    padding: 0vh 1.25vw;
+    font-size: 2.25vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+}
+
+#signup-container h2 {
+    margin-bottom: 5vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    color: #01579B;
+}
+
+.signup-form-group {
+    position: relative;
+    margin: 0.25vh 0;
+}
+
+.signup-form-group input {
+    height: 2vw;
+    width: 25vw;
+    padding: 2.5vh 1vw;
+    font-size: 1.25vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    border: 0.125vw solid dimgray;
+    outline: none;
+    transition: 0.15s all ease;
+    user-select: none;
+}
+
+
+.signup-form-group input::placeholder {
+    color: transparent;
+}
+
+.signup-form-group .signup-form-label {
+    padding: 0 0.125vw;
+    position: absolute;
+    top: 1.125vh;
+    left: 1vw;
+    font-size: 1.125vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    pointer-events: none;
+    transition: 0.15s all ease;
+    user-select: none;
+    z-index: 0;
+}
+
+.signup-form-group input:focus+.signup-form-label,
+.signup-form-group input:not(:placeholder-shown)+.signup-form-label {
+    transform: translate(-0.25vw, -1.35vw);
+    color: #333;
+    background-color: white;
+    font-size: 0.95vw;
+    padding: 0 0.25vw;
+}
+
+#show {
+    position: relative;
+    top: 0.125vw;
+    display: inline-block;
+    height: 1.25vw;
+    width: 1.25vw;
+    border: 0.125vw solid #333;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#show input {
+    display: none;
+}
+
+#show span {
+    position: absolute;
+    top: -0.4vw;
+    font-size: 1.25vw;
+    color: white;
+}
+
+#show-word {
+    margin-left: 0.35vw;
+    font-size: 0.95vw;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
+}
+
+#next-button {
+    height: 3.25vw;
+    width: 25vw;
+    font-size: 1.5vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #01579B;
+    border: none;
+    cursor: pointer;
+}
+
+#signup-container button:hover {
+    opacity: 0.9;
+}
+
+.signup-form-group div {
+    padding: 0.25vh 0 0 0;
+    font-size: 0.9vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 1.25vw;
+    width: 100%;
+    color: red;
+    overflow: hidden;
+}
+
+#signup-container p {
+    margin-top: 1.5vh;
+    font-size: 1.25vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: black;
+}
+
+#signup-container a {
+    font-size: 1.3vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: blue;
+}
+
+
+
+
+/* -------------------------------Responsive----------------------------------------- */
+
+@media (max-width: 768px) {
+
+    #signup-container {
+        width: 75%;
+        gap: 1.5vh;
+    }
+
+    #back {
+        position: absolute;
+        top: 0vh;
+        left: 2vw;
+        padding: 0vh 2.5vw;
+        font-size: 5.75vw;
+    }
+
+    #signup-container h2 {
+        margin-bottom: 5vh;
+        font-size: 7vw;
+    }
+
+    .signup-form-group {
+        position: relative;
+        margin: 0.25vh 0;
+    }
+
+    .signup-form-group input {
+        height: 2vw;
+        width: 50vw;
+        font-size: 3.25vw;
+    }
+
+    .signup-form-group .signup-form-label {
+        position: absolute;
+        top: 1.125vh;
+        left: 1vw;
+        font-size: 2.75vw;
+    }
+
+    .signup-form-group input:focus+.signup-form-label,
+    .signup-form-group input:not(:placeholder-shown)+.signup-form-label {
+        transform: translate(-0.25vw, -2.75vh);
+        font-size: 2.75vw;
+    }
+
+    #show {
+        top: 0.45vw;
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+
+    #show span {
+        top: -0.5vw;
+        font-size: 2.25vw;
+    }
+
+    #show-word {
+        margin-left: 1vw;
+        font-size: 2.25vw;
+    }
+
+    #next-button {
+        margin-top: 1.125vh;
+        height: 6.5vw;
+        width: 50vw;
+        font-size: 3.5vw;
+    }
+
+    .signup-form-group div {
+        padding: 0.25vh 0 0 0;
+        font-size: 2vw;
+        height: 2.5vw;
+        width: 50vw;
+    }
+
+    #signup-container p {
+        margin-top: 1.5vh;
+        font-size: 3vw;
+    }
+
+    #signup-container a {
+        font-size: 3.5vw;
+    }
+}
+
+/* for mobile phones */
+@media (max-width:480px) {
+
+    #signup-container {
+        width: 75%;
+        gap: 1.5vh;
+        margin-top: 7.5vw;
+        justify-content: flex-start;
+    }
+
+    #back {
+        position: absolute;
+        top: 0vh;
+        left: 2vw;
+        padding: 0.5vh 2.75vw;
+        font-size: 5.75vw;
+    }
+
+    #signup-container h2 {
+        margin-bottom: 4vh;
+        font-size: 7.5vw;
+    }
+
+    .signup-form-group {
+        position: relative;
+        margin: 0.25vh 0;
+    }
+
+    .signup-form-group input {
+        height: 2vw;
+        width: 75vw;
+        font-size: 5vw;
+    }
+
+    .signup-form-group .signup-form-label {
+        position: absolute;
+        top: 1.135vh;
+        left: 1.5vw;
+        font-size: 3.5vw;
+    }
+
+    .signup-form-group input:focus+.signup-form-label,
+    .signup-form-group input:not(:placeholder-shown)+.signup-form-label {
+        transform: translate(-0.25vw, -2.45vh);
+        font-size: 3.125vw;
+    }
+
+    #show {
+        top: 0.25vw;
+        height: 4.25vw;
+        width: 4.25vw;
+    }
+
+    #show span {
+        top: -1vw;
+        font-size: 4vw;
+    }
+
+    #show-word {
+        margin-left: 1.5vw;
+        font-size: 3.5vw;
+    }
+
+    #next-button {
+        margin-top: 1.5vh;
+        height: 10vw;
+        width: 75vw;
+        font-size: 5.25vw;
+    }
+
+    .signup-form-group div {
+        padding: 0.25vh 0 0 0;
+        font-size: 3vw;
+        height: 4.25vw;
+        width: 75vw;
+    }
+
+    #signup-container p {
+        margin-top: 1.5vh;
+        font-size: 4.5vw;
+    }
+
+    #signup-container a {
+        font-size: 4.75vw;
+    }
+}

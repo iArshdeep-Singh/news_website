@@ -1,0 +1,118 @@
+/* Skeleton */
+#skeleton-image {
+    height: 40vh;
+    width: 35vw;
+    margin: 6vh 0vw -4vh 1.75vw;
+    border-radius: 0.75vw;
+    float: right;
+    opacity: 0.7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-title {
+    position: relative;
+    top: 5.75vh;
+    height: 8vh;
+    width: 61%;
+    margin: 1vh 0vw 1vh 0vw;
+    border-radius: 0.75vw;
+    /* background-color: #01579B; */
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+#last-title {
+    width: 42.5vw;
+}
+
+.skeleton-article {
+    position: relative;
+    top: 5.5vh;
+    margin: 1vh 0vw 1vh 0vw;
+    height: 2vh;
+    width: 100%;
+    border-radius: 0.75vw;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+#first-article {
+    margin-top: 4vh;
+}
+
+#first-article,
+#second-article,
+#third-article,
+#fourth-article {
+    /* margin-top: 3.5vh; */
+    width: 61%;
+}
+
+#first-content {
+    margin-top: 8.5vh;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 90%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+
+}
+
+
+/* -------------------------------Responsive---------------------------------------- */
+@media (max-width:768px) {
+    #skeleton-image {
+        height: 40vh;
+        width: 100%;
+        margin: 6vh 0vw 0vh 1.75vw;
+        border-radius: 0.75vw;
+        float: right;
+        opacity: 0.7;
+        animation: skeleton-loading 1s linear infinite alternate;
+    }
+
+    .skeleton-title {
+        position: relative;
+        top: 48vh;
+        height: 8vh;
+        width: 100%;
+        margin: 1vh 0vw 1vh 0vw;
+        border-radius: 0.75vw;
+        /* background-color: #01579B; */
+        animation: skeleton-loading 1s linear infinite alternate;
+    }
+
+    #last-title {
+        width: 42.5vw;
+    }
+
+    .skeleton-article {
+        position: relative;
+        top: 45.5vh;
+        margin: 1vh 0vw 1vh 0vw;
+        height: 2vh;
+        width: 100%;
+        border-radius: 0.75vw;
+        animation: skeleton-loading 1s linear infinite alternate;
+    }
+
+    #first-article {
+        margin-top: 4vh;
+    }
+
+    #first-article,
+    #second-article,
+    #third-article,
+    #fourth-article {
+        /* margin-top: 3.5vh; */
+        width: 100%;
+    }
+
+    #first-content {
+        margin-top: 8.5vh;
+    }
+
+}

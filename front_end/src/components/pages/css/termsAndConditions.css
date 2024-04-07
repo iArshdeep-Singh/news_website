@@ -1,0 +1,201 @@
+#tc-body {
+    padding: 2vw;
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+#tc-body::-webkit-scrollbar {
+    display: none;
+}
+
+#tc-body h1 {
+    font-size: 3.5vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0.5vw;
+}
+
+#tc-body h2 {
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0.5vw 0;
+}
+
+#tc-body ul {
+    margin-left: 2vw;
+    margin-bottom: 1vw;
+    font-size: 1.25vw;
+    color: #333;
+}
+
+
+#tc-body p {
+    display: inline-block;
+    margin-bottom: 2vw;
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2vw;
+    color: #333;
+    user-select: none;
+}
+
+#tc-body input {
+    display: none;
+}
+
+.custom-checkbox {
+    position: relative;
+    top: 0.25vw;
+    display: inline-block;
+    margin-right: 1vw;
+    height: 1.75vw;
+    width: 1.75vw;
+    border: 0.125vw solid #333;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-checkbox.checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.custom-checkbox span {
+    position: absolute;
+    top: -0.5vw;
+    font-size: 1.75vw;
+    color: white;
+}
+
+#cancel-continue {
+    margin-top: 5vw;
+    position: relative;
+    width: 100%;
+}
+
+
+#cancel-continue button {
+    position: absolute;
+    bottom: 0.125vw;
+    height: 3.25vw;
+    width: 25vw;
+    font-size: 1.75vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.continue {
+    right: 0;
+    color: white;
+    background-color: #01579B;
+    border: none;
+    cursor: pointer;
+}
+
+.continue.disable {
+    opacity: 0.5;
+    cursor: default;
+}
+
+#cancel {
+    color: #333;
+    border: 0.125vw solid gray;
+    cursor: pointer;
+}
+
+
+
+/* ----------------------------------RESPONSIVE--------------------------------------- */
+@media (max-width:768px) {
+    #tc-body {
+        height: 100%;
+    }
+
+    #tc-body h1 {
+        font-size: 5.75vw;
+    }
+
+    #tc-body h2 {
+        font-size: 3.5vw;
+    }
+
+    #tc-body ul {
+        font-size: 2.125vw;
+    }
+
+    #tc-body p {
+        font-size: 2.125vw;
+        line-height: 2vw;
+    }
+
+    .custom-checkbox {
+        height: 3vw;
+        width: 3vw;
+    }
+
+    .custom-checkbox span {
+        top: -0.5vw;
+        font-size: 3vw;
+    }
+
+    #cancel-continue button {
+        height: 4.25vw;
+        width: 25vw;
+        font-size: 3vw;
+    }
+}
+
+
+/* for mobile phones */
+@media (max-width:480px) {
+    #tc-body {
+        padding: 0 3vw;
+        height: 100%;
+    }
+
+    #tc-body h1 {
+        font-size: 7.75vw;
+    }
+
+    #tc-body h2 {
+        font-size: 5.25vw;
+    }
+
+    #tc-body ul {
+        margin-left: 3.5vw;
+        font-size: 2.75vw;
+    }
+
+    #tc-body p {
+        font-size: 3vw;
+        line-height: 3.75vw;
+    }
+
+    .custom-checkbox {
+        height: 4.25vw;
+        width: 4.25vw;
+    }
+
+    .custom-checkbox span {
+        top: -0.9vw;
+        font-size: 4.5vw;
+    }
+
+    #cancel-continue button {
+        position: relative;
+        height: 7vw;
+        width: 25vw;
+        font-size: 4.5vw;
+        margin-bottom: 7vw;
+    }
+
+    .continue {
+        left: 7.5vw;
+    }
+
+}

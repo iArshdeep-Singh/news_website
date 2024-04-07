@@ -1,0 +1,154 @@
+.popup-body {
+    position: fixed;
+    top: 10vh;
+    height: 90vh;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 255, 0.5));
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-body.none {
+    display: none;
+}
+
+#popup-container {
+    padding: 1.5vw;
+    height: 25vw;
+    width: 25vw;
+    background-color: whitesmoke;
+    border-radius: 2.5vw;
+    overflow: hidden;
+}
+
+#popup-container div {
+    text-align: right;
+    font-size: 2.25vw;
+    font-weight: bolder;
+    cursor: pointer;
+    color: black;
+    user-select: none;
+}
+
+#popup-container p {
+    margin: 2vw 0;
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 550;
+    color: #cc0000;
+}
+
+#popup-container a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    cursor: default;
+}
+
+#popup-container a button {
+    margin: 1vw;
+    padding: 0.5vw 1vw;
+    font-size: 1.5vw;
+    color: white;
+    background-color: royalblue;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+
+/* ----------------------RESPONSIVE---------------------------- */
+@media (max-width:768px) {
+    .popup-body {
+        position: fixed;
+        top: 7.5vh;
+        height: 92.5vh;
+        width: 100vw;
+        z-index: 1;
+    }
+
+    .popup-body.none {
+        display: none;
+    }
+
+    #popup-container {
+        padding: 1.75vw;
+        height: 50vw;
+        width: 50vw;
+        border-radius: 2.75vw;
+    }
+
+    #popup-container div {
+        font-size: 4.75vw;
+    }
+
+    #popup-container p {
+        margin: 2.5vw 0;
+        text-align: center;
+        font-size: 4.5vw;
+    }
+
+    #popup-container a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        cursor: default;
+    }
+
+    #popup-container a button {
+        margin: 3.5vw;
+        padding: 1vw 2vw;
+        font-size: 4vw;
+        border-radius: 1vw;
+    }
+}
+
+
+
+/* for mobile phones */
+@media (max-width:480px) {
+    .popup-body {
+        position: fixed;
+        top: 7.5vh;
+        height: 92.5vh;
+        width: 100vw;
+        z-index: 1;
+    }
+
+    .popup-body.none {
+        display: none;
+    }
+
+    #popup-container {
+        padding: 2vw;
+        height: 60vw;
+        width: 60vw;
+    }
+
+    #popup-container div {
+        font-size: 5.75vw;
+    }
+
+    #popup-container p {
+        margin: 3.5vw 0;
+        font-size: 5.25vw;
+    }
+
+    #popup-container a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        cursor: default;
+    }
+
+    #popup-container a button {
+        margin: 4.5vw;
+        padding: 1.5vw 2.75vw;
+        font-size: 5vw;
+        border-radius: 1vw;
+    }
+}

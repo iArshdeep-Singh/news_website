@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*for firefox*/
+body {
+  scrollbar-width: none;
+}
+
+/*for edge and IE*/
+body {
+  -ms-overflow-style: none;
+}

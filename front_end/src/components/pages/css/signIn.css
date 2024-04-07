@@ -1,0 +1,334 @@
+#signIn-body {
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#signIn-container {
+    height: 100%;
+    width: 25%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+
+#signIn-container h2 {
+    margin-bottom: 5vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    color: #01579B;
+}
+
+.signIn-form-group {
+    position: relative;
+    margin: 0.25vh 0;
+}
+
+.signIn-form-group input {
+    height: 2vw;
+    width: 25vw;
+    padding: 2.5vh 1vw;
+    font-size: 1.25vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    border: 0.125vw solid dimgray;
+    outline: none;
+    transition: 0.15s all ease;
+    user-select: none;
+
+}
+
+.signIn-form-group input:focus {
+    border: 0.125 solid blue;
+}
+
+.signIn-form-group input::placeholder {
+    color: transparent;
+}
+
+.signIn-form-group .signIn-form-label {
+    padding: 0 0.125vw;
+    position: absolute;
+    top: 1.125vh;
+    left: 1vw;
+    font-size: 1.125vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+
+.signIn-form-group input:focus+.signIn-form-label,
+.signIn-form-group input:not(:placeholder-shown)+.signIn-form-label {
+    transform: translate(-0.25vw, -1.35vw);
+    color: #333;
+    background-color: white;
+    font-size: 0.95vw;
+    padding: 0 0.25vw;
+}
+
+#show {
+    position: relative;
+    top: 0.125vw;
+    display: inline-block;
+    height: 1.25vw;
+    width: 1.25vw;
+    border: 0.125vw solid #333;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#show input {
+    display: none;
+}
+
+#show span {
+    position: absolute;
+    top: -0.4vw;
+    font-size: 1.25vw;
+    color: white;
+}
+
+#show-word {
+    margin-left: 0.35vw;
+    font-size: 0.95vw;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
+}
+
+#signIn-container button {
+    height: 3.25vw;
+    width: 25vw;
+    font-size: 1.5vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+#sign-in {
+    color: white;
+    background-color: #01579B;
+    border: none;
+}
+
+#forgot-password {
+    margin-bottom: 2vh;
+    color: #01579B;
+    background-color: white;
+    border: 0.125vw solid #01579B;
+}
+
+#signIn-container button:hover {
+    opacity: 0.9;
+}
+
+#forgot-password:hover {
+    background-color: whitesmoke;
+}
+
+#signIn-form-group div {
+    padding: 0.25vh 0 0 0;
+    font-size: 0.9vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 1.25vw;
+    width: 100%;
+    color: red;
+    overflow: hidden;
+}
+
+#signIn-container p {
+    margin-top: 1.5vh;
+    font-size: 1.25vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: black;
+}
+
+#signIn-container a {
+    font-size: 1.3vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* -----------------------------------Responsive------------------------------------ */
+@media (max-width: 768px) {
+
+    #signIn-container {
+        width: 75%;
+        gap: 1.5vh;
+    }
+
+    #signIn-container h2 {
+        margin-bottom: 5vh;
+        font-size: 7vw;
+    }
+
+    .signIn-form-group {
+        position: relative;
+        margin: 0.25vh 0;
+    }
+
+    .signIn-form-group input {
+        height: 2vw;
+        width: 50vw;
+        font-size: 3.25vw;
+    }
+
+    .signIn-form-group .signIn-form-label {
+        position: absolute;
+        top: 1.125vh;
+        left: 1vw;
+        font-size: 2.75vw;
+    }
+
+    .signIn-form-group input:focus+.signIn-form-label,
+    .signIn-form-group input:not(:placeholder-shown)+.signIn-form-label {
+        transform: translate(-0.25vw, -2.75vh);
+        font-size: 2.75vw;
+    }
+
+    .signIn-form-group div {
+        padding: 0.25vh 0 0 0;
+        font-size: 2vw;
+        height: 2.5vw;
+        width: 50vw;
+    }
+
+    #show {
+        top: 0.45vw;
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+
+    #show span {
+        top: -0.5vw;
+        font-size: 2.25vw;
+    }
+
+    #show-word {
+
+        margin-left: 1vw;
+        font-size: 2.25vw;
+    }
+
+    #signIn-container button {
+        height: 6.5vw;
+        width: 50vw;
+        font-size: 3.5vw;
+    }
+
+    #forgot-password {
+        margin-bottom: 1vh;
+    }
+
+    #signIn-container p {
+        margin-top: 1.5vh;
+        font-size: 3vw;
+    }
+
+    #signIn-container a {
+        font-size: 3.5vw;
+    }
+}
+
+/* for mobile phones */
+@media (max-width:480px) {
+
+    #signIn-container {
+        width: 75%;
+        gap: 1.5vh;
+        margin-top: 7.5vw;
+        justify-content: flex-start;
+    }
+
+    #back {
+        position: absolute;
+        top: 0vh;
+        left: 2vw;
+        padding: 0.5vh 2.75vw;
+        font-size: 5.75vw;
+    }
+
+    #signIn-container h2 {
+        margin-bottom: 4vh;
+        font-size: 7.5vw;
+    }
+
+    .signIn-form-group {
+        position: relative;
+        margin: 0.25vh 0;
+    }
+
+    .signIn-form-group input {
+        height: 2vw;
+        width: 75vw;
+        font-size: 5vw;
+    }
+
+    #show {
+        top: 0.25vw;
+        height: 4.25vw;
+        width: 4.25vw;
+    }
+
+    #show span {
+        top: -1vw;
+        font-size: 4vw;
+    }
+
+    #show-word {
+        margin-left: 1.5vw;
+        font-size: 3.5vw;
+    }
+
+    .signIn-form-group .signIn-form-label {
+        position: absolute;
+        top: 1.135vh;
+        left: 1.5vw;
+        font-size: 3.5vw;
+    }
+
+    .signIn-form-group input:focus+.signIn-form-label,
+    .signIn-form-group input:not(:placeholder-shown)+.signIn-form-label {
+        transform: translate(-0.25vw, -2.45vh);
+        font-size: 3.125vw;
+    }
+
+    #signIn-container button {
+        height: 10vw;
+        width: 75vw;
+        font-size: 5.25vw;
+    }
+
+    #forgot-password {
+        margin-bottom: 1vh;
+    }
+
+    .signIn-form-group div {
+        padding: 0.25vh 0 0 0;
+        font-size: 3vw;
+        height: 4.25vw;
+        width: 75vw;
+    }
+
+    #signIn-container p {
+        margin-top: 1.5vh;
+        font-size: 4.25vw;
+    }
+
+    #signIn-container a {
+        font-size: 4.75vw;
+    }
+}

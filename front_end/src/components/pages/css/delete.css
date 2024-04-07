@@ -1,0 +1,248 @@
+#delete-body {
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#back {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    padding: 0vh 1.25vw;
+    font-size: 2.25vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+}
+
+#delete-container {
+    height: 100%;
+    width: 25%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
+#delete-form {
+    position: relative;
+    margin: 0.25vh 0;
+}
+
+#delete-form label {
+    font-size: 1.25vw;
+}
+
+#delete-form input {
+    margin-top: 0.25vw;
+    height: 2vw;
+    width: 25vw;
+    padding: 2.5vh 1vw;
+    font-size: 1.25vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    border: 0.125vw solid dimgray;
+    outline: none;
+    transition: 0.15s all ease;
+    user-select: none;
+
+}
+
+#validation-message {
+    margin-bottom: 0.25vw;
+    padding: 0.25vh 0 0 0;
+    font-size: 0.9vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 1.25vw;
+    width: 100%;
+    color: red;
+    overflow: hidden;
+}
+
+#show {
+    position: relative;
+    top: 0.125vw;
+    display: inline-block;
+    height: 1.25vw;
+    width: 1.25vw;
+    border: 0.125vw solid #333;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#show input {
+    display: none;
+}
+
+#show span {
+    position: absolute;
+    top: -0.4vw;
+    font-size: 1.25vw;
+    color: white;
+}
+
+#show-word {
+    margin-left: 0.35vw;
+    font-size: 0.95vw;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
+}
+
+#delete-form button {
+    margin-top: 0.5vw;
+    height: 3.25vw;
+    width: 25vw;
+    font-size: 1.5vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer
+}
+
+#delete-form button:hover {
+    opacity: 0.9;
+}
+
+
+
+
+/* -----------------------------RESPONSIVE------------------------------- */
+@media (max-width:768px) {
+
+    #delete-container {
+        width: 50%;
+        height: 100%;
+    }
+
+    #back {
+        position: absolute;
+        top: 2vw;
+        left: 2vw;
+        padding: 0vh 2.5vw;
+        font-size: 5.75vw;
+    }
+
+    #delete-form {
+        position: relative;
+        margin: 0.25vh 0;
+    }
+
+    #delete-form label {
+        font-size: 4.25vw;
+    }
+
+    #delete-form input {
+        height: 2vw;
+        width: 50vw;
+        font-size: 3.25vw;
+    }
+
+    #validation-message {
+        margin-bottom: 1vw;
+        padding: 0.25vh 0 0 0;
+        font-size: 2vw;
+        height: 2.5vw;
+        width: 50vw;
+    }
+
+    #show {
+        top: 0.45vw;
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+
+    #show span {
+        top: -0.5vw;
+        font-size: 2.25vw;
+    }
+
+    #show-word {
+        margin-left: 1vw;
+        font-size: 2.25vw;
+    }
+
+    #delete-form button {
+        margin-top: 1vw;
+        height: 6.5vw;
+        width: 50vw;
+        font-size: 3.5vw;
+    }
+
+}
+
+
+
+/* for mobile phones */
+@media (max-width:480px) {
+
+    #delete-container {
+        width: 75%;
+        height: 100%;
+    }
+
+    #back {
+        position: absolute;
+        top: 2vw;
+        left: 2vw;
+        padding: 0.5vh 2.75vw;
+        font-size: 5.75vw;
+    }
+
+    #delete-form {
+        position: relative;
+        margin: 0.25vh 0;
+    }
+
+    #delete-form label {
+        font-size: 5.75vw;
+    }
+
+    #delete-form input {
+        height: 2vw;
+        width: 75vw;
+        font-size: 5vw;
+    }
+
+    #validation-message {
+        margin-bottom: 1vw;
+        padding: 0.25vh 0 0 0;
+        font-size: 3vw;
+        height: 4.25vw;
+        width: 75vw;
+    }
+
+    #show {
+        top: 0.25vw;
+        height: 4.25vw;
+        width: 4.25vw;
+    }
+
+    #show span {
+        top: -1vw;
+        font-size: 4vw;
+    }
+
+    #show-word {
+        margin-left: 1.5vw;
+        font-size: 3.5vw;
+    }
+
+    #delete-form button {
+        margin-top: 1.25vw;
+        height: 10vw;
+        width: 75vw;
+        font-size: 5.25vw;
+    }
+}

@@ -1,0 +1,410 @@
+#nav {
+    position: fixed;
+    padding: 0 2vw 0 2vw;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: white;
+    border-bottom: 0.125vw solid lightgray;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#nav>span {
+    margin: 0vh 1vw 0vh 0vw;
+    padding: 0.75vh 0.75vw;
+    font-size: 2.5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    color: black;
+    border: 0.125vw solid black;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#links-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+#links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+#links a {
+    display: block;
+    padding: 5vh 0.75vw 5vh 0.75vw;
+    letter-spacing: 0.01vw;
+    font-size: 1.3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    user-select: none;
+    overflow: hidden;
+}
+
+#links a::first-letter {
+    font-weight: 550;
+    font-size: 1.65vw;
+}
+
+#nav a:hover {
+    color: royalblue;
+    background-color: whitesmoke;
+}
+
+
+#nav div:nth-child(2) {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0 0.5vw 0 0.5vw;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.125vw solid lightgray;
+    border-radius: 5vw;
+    overflow: hidden;
+}
+
+#nav input {
+    padding: 2.25vh 0.75vw;
+    height: 2.5vh;
+    width: auto;
+    font-size: 1.35vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: transparent;
+    border: 0.125vw solid transparent;
+    border-radius: 5vw;
+    text-indent: 0.25vw;
+    user-select: none;
+}
+
+#nav input::placeholder {
+    padding-left: 0.11124vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1125vw;
+}
+
+#nav input:focus {
+    outline: none;
+}
+
+#nav div button {
+    font-size: 1.35vw;
+    padding: 0.25vh;
+    border: none;
+    border-left: 0.125vw solid lightgray;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#nav div button:active {
+    opacity: 0.75;
+}
+
+#nav div:nth-child(4) {
+    position: relative;
+    margin: 0vh 0.125vw 0 -7.5vw;
+    width: 3vw;
+    overflow: hidden;
+}
+
+#profile {
+    margin-left: 2vw;
+    height: 10vh;
+    width: 3vw;
+    background-color: transparent;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile span {
+    font-size: 2.75vw;
+}
+
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 10vh;
+    height: 100%;
+    width: 22.5vw;
+    background-color: lightgray;
+    transition: transform 250ms ease-in-out;
+    z-index: 3;
+}
+
+.sidebar.close {
+    transform: translateX(22.5vw);
+
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+}
+
+.sidebar-menu li {
+    padding: 3vh 2vw;
+    text-decoration: none;
+    font-size: 1.25vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: transparent;
+}
+
+.sidebar-menu li:hover {
+    color: white;
+    background-color: black;
+}
+
+.sidebar-menu li:active {
+    color: white;
+    background-color: black;
+}
+
+
+
+#sign-ul {
+    padding: 0.75vw 0 0.75vw 0;
+    height: auto;
+    width: 5vw;
+    font-size: 1.125vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    border: 0.125vw solid lightgray;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/*----------------------------------RESPONSIVE------------------------------*/
+
+/*for tablets*/
+@media (max-width: 786px) {
+
+    #nav {
+        height: 7.5vh;
+    }
+
+    #nav>span {
+        font-size: 4vw;
+    }
+
+    #links-container {
+        position: relative;
+        height: 100%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        overflow: scroll;
+        overflow-y: hidden;
+        scrollbar-width: none;
+    }
+
+    #links-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    #links a {
+        padding: 5vh 1.25vw 5vh 1.25vw;
+        font-size: 2.5vw;
+    }
+
+    #links a::first-letter {
+        font-weight: 575;
+        font-size: 3vw;
+    }
+
+
+    #nav div:nth-child(2) {
+        width: auto;
+        height: auto;
+        padding: 0 0.5vw 0 0.5vw;
+        background-color: whitesmoke;
+        border: 0.125vw solid lightgray;
+    }
+
+    #nav input {
+        padding: 1.5vh 0.75vw;
+        height: 2.5vh;
+        width: 25vw;
+        font-size: 2.5vw;
+    }
+
+    #nav input::placeholder {
+        font-size: 2vw;
+    }
+
+    #nav div button {
+        font-size: 1.75vw;
+        padding: 0.75vh;
+    }
+
+    #nav div:nth-child(4) {
+        margin: 0vh 0.125vw 0 0vw;
+        width: 4vw;
+    }
+
+    #profile span {
+        font-size: 4.5vw;
+    }
+
+
+    .sidebar {
+        right: 0;
+        top: 7.5vh;
+        height: 100%;
+        width: 50vw;
+    }
+
+    .sidebar.close {
+        transform: translateX(50vw);
+
+    }
+
+    .sidebar-menu li {
+        padding: 2vh 3vw;
+        text-decoration: none;
+        font-size: 2.75vw;
+    }
+
+    .sidebar-menu li:hover {
+        color: white;
+        background-color: black;
+    }
+
+    #sign-ul {
+        padding: 1.25vw 0 1.25vw 0;
+        height: auto;
+        width: 10vw;
+        font-size: 2.75vw;
+    }
+}
+
+
+/* for mobile phones */
+@media (max-width:480px) {
+    #nav {
+        height: 7.75vh;
+    }
+
+    #nav>span {
+        font-size: 7.5vw;
+        padding: 0vh 1vw;
+    }
+
+    #nav>span span {
+        display: none;
+    }
+
+    #links-container {
+        height: 80%;
+        width: 30%;
+        margin-right: -1vw;
+        background-color: whitesmoke;
+        /* border-left: 1px solid black; */
+        /* border-right: 1px solid black; */
+        border-radius: 5vw;
+    }
+
+    #links a {
+        padding: 5vh 1.25vw 5vh 1.25vw;
+        font-size: 3.75vw;
+        color: black;
+    }
+
+    #links a::first-letter {
+        font-weight: 600;
+        font-size: 4.5vw;
+    }
+
+    #nav a:hover {
+        color: royalblue;
+        background-color: transparent;
+    }
+
+    #nav div:nth-child(2) {
+        width: auto;
+        height: auto;
+        padding: 0 0.5vw 0 0.5vw;
+        background-color: whitesmoke;
+        border: 0.125vw solid lightgray;
+        border-radius: 1vw;
+    }
+
+    #nav input {
+        padding: 1.5vh 0.75vw;
+        height: 3.75vh;
+        width: 45.5vw;
+        font-size: 4vw;
+    }
+
+    #nav input::placeholder {
+        font-size: 3.5vw;
+    }
+
+    #nav div button {
+        display: none;
+        font-size: 3vw;
+        padding: 0.75vh;
+    }
+
+    #nav div:nth-child(4) {
+        margin: 0vh 0vw 0 0vw;
+        width: 6vw;
+    }
+
+    #profile span {
+        font-size: 7.5vw;
+    }
+
+    .sidebar {
+        right: 0;
+        top: 7.5vh;
+        height: 100%;
+        width: 100%;
+    }
+
+    .sidebar.close {
+        transform: translateX(100%);
+
+    }
+
+    .sidebar-menu li {
+        text-align: center;
+        padding: 2vh 3vw;
+        text-decoration: none;
+        font-size: 4.75vw;
+    }
+
+    #sign-ul {
+        padding: 1.75vw 0 1.75vw 0;
+        height: auto;
+        width: 15vw;
+        font-size: 3.75vw;
+    }
+}

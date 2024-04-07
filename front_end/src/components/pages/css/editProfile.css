@@ -1,0 +1,308 @@
+#edit-container {
+    padding: 0 2vw;
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bacck {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    padding: 0vh 1.25vw;
+    font-size: 2.25vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+}
+
+#edit-first-container {
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+#edit-image-container {
+    position: relative;
+    height: 25vw;
+    width: 25vw;
+    border: 0.15vw dashed #01579B;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+#edit-image-container img {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
+    font-family: 'Courier New', Courier, monospace;
+    color: #cc0000;
+    background-color: white;
+}
+
+#edit-select-image {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    padding-top: 3.5vw;
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background: transparent;
+    border-top: 0.15vw dashed #01579B;
+    color: #01579B;
+    cursor: pointer;
+}
+
+#edit-select-image:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(15px);
+}
+
+#edit-second-container {
+    position: relative;
+    height: 25vw;
+    width: 60vw;
+    overflow: hidden;
+}
+
+.edit-form-container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-form-container label {
+    margin-bottom: 0.125vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #01579B;
+}
+
+.edit-form-container input {
+    padding: 0 0.5vw 0 0.5vw;
+    height: 2.75vw;
+    width: auto;
+    font-size: 1.75vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    border: 0.125vw solid #01579B;
+    outline: none;
+}
+
+.edit-form-container input:focus {
+    border: 0.15vw solid #01579B;
+}
+
+.edit-form-container div {
+    height: 2vw;
+    width: auto;
+    font-size: 1.25vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+#edit-second-container button {
+    margin: 1vw 0 0 0;
+    padding: 0.5vw 1vw;
+    width: 20vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    color: white;
+    background-color: royalblue;
+    border: 0.125vw solid royalblue;
+    border-radius: 5vw;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#edit-second-container :nth-child(5) button {
+    margin-top: 2.5vh;
+    color: #cc0000;
+    border: 0.125vw solid #cc0000;
+    background-color: transparent;
+}
+
+#edit-second-container button:hover {
+    opacity: 0.9;
+}
+
+
+
+/* -----------------------RESPONSIVE------------------------- */
+@media (max-width:768px) {
+    #edit-container {
+        padding: 0 2vw;
+        top: 7.5vh;
+        height: 92.5vh;
+        width: 100vw;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    #bacck {
+        position: absolute;
+        top: 5vw;
+        left: 2vw;
+        padding: 0vh 2.5vw;
+        font-size: 5.75vw;
+    }
+
+    #edit-first-container {
+        margin: 10vw 10vw 2.5vw 10vw;
+    }
+
+    #edit-image-container {
+        height: 50vw;
+        width: 50vw;
+        border: 0.35vw dashed #01579B;
+    }
+
+    #edit-image-container img {
+        font-size: 3.35vw;
+    }
+
+    #edit-select-image {
+        padding-top: 7.5vw;
+        font-size: 3.25vw;
+        border-top: 0.35vw dashed #01579B;
+    }
+
+    #edit-second-container {
+        height: auto;
+        width: auto;
+    }
+
+    .edit-form-container {
+        width: auto;
+        height: auto;
+    }
+
+    .edit-form-container label {
+        margin-bottom: 0.125vw;
+        font-size: 2.75vw;
+    }
+
+    .edit-form-container input {
+        height: 6.5vw;
+        width: 50vw;
+        font-size: 3.25vw;
+    }
+
+    .edit-form-container input:focus {
+        border: 0.25vw solid #01579B;
+    }
+
+    .edit-form-container div {
+        margin-bottom: 1vw;
+        font-size: 2.5vw;
+        height: 2.5vw;
+        width: 50vw;
+    }
+
+    #edit-second-container button {
+        margin: 3.5vh 0 0 0;
+        padding: 1vw 1vw;
+        width: 50vw;
+        font-size: 3.5vw;
+    }
+
+}
+
+
+
+/* for mobile phones */
+@media (max-width:480px) {
+    #edit-container {
+        top: 7.5vh;
+        height: 100%;
+        width: 100vw;
+    }
+
+    #bacck {
+        position: absolute;
+        top: 5vw;
+        left: 2vw;
+        padding: 0.5vh 2.75vw;
+        font-size: 5.75vw;
+    }
+
+    #edit-first-container {
+        margin: 10vw 10vw 2.5vw 10vw;
+    }
+
+    #edit-image-container {
+        height: 60vw;
+        width: 60vw;
+        border: 0.5vw dashed #01579B;
+    }
+
+    #edit-image-container img {
+        font-size: 3.35vw;
+    }
+
+    #edit-select-image {
+        padding-top: 8.75vw;
+        font-size: 4.5vw;
+        border-top: 0.5vw dashed #01579B;
+    }
+
+    #edit-second-container {
+        height: auto;
+        width: auto;
+    }
+
+    .edit-form-container {
+        width: auto;
+        height: auto;
+    }
+
+    .edit-form-container label {
+        margin-bottom: 0.125vw;
+        font-size: 3.75vw;
+    }
+
+    .edit-form-container input {
+        height: 7.5vw;
+        width: 75vw;
+        font-size: 5vw;
+    }
+
+    .edit-form-container input:focus {
+        border: 0.25vw solid #01579B;
+    }
+
+    .edit-form-container div {
+        margin-bottom: 1.25vw;
+        font-size: 3.25vw;
+        height: 4.25vw;
+        width: 75vw;
+    }
+
+    #edit-second-container button {
+        margin: 4.75vh 0 0 0;
+        padding: 1.75vw 1vw;
+        width: 75vw;
+        font-size: 5vw;
+    }
+
+}

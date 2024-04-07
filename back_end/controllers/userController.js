@@ -234,6 +234,8 @@ const update = async (req, res) => {
                         contentType: req.file.mimetype,
                     }
                 })
+
+                fs.unlinkSync(req.file.path)
             } else
             {
                 await User.findByIdAndUpdate(id, {
@@ -254,6 +256,8 @@ const update = async (req, res) => {
                         contentType: req.file.mimetype,
                     }
                 })
+
+                fs.unlinkSync(req.file.path)
             } else
             {
                 await User.findByIdAndUpdate(id, {
@@ -263,12 +267,6 @@ const update = async (req, res) => {
             }
         }
 
-
-        // delete image file in folder
-        if (req.file.path)
-        {
-            fs.unlinkSync(req.file.path)
-        }
 
         console.log("Profile updated successfully..".bgBlue.white)
         return res.status(200).send({

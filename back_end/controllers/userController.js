@@ -265,7 +265,10 @@ const update = async (req, res) => {
 
 
         // delete image file in folder
-        fs.unlinkSync(req.file.path)
+        if (req.file.path)
+        {
+            fs.unlinkSync(req.file.path)
+        }
 
         console.log("Profile updated successfully..".bgBlue.white)
         return res.status(200).send({

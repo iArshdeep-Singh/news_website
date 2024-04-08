@@ -25,8 +25,7 @@ const Header = () => {
 
     const handleAPI = async () => {
 
-        const {payload} = await dispatch(newsData(activeLink))
-        console.log(payload, "--P")
+     dispatch(newsData(activeLink))
     }
 
 
@@ -37,7 +36,6 @@ const Header = () => {
     const handleKeyDown = (event) => {
         if (event.key === 'Enter')
         {
-            console.log("Clicked!--1")
             // scrollTop()
             navigate('/')
             dispatch(switchLink({endpoint: "everything", query: searchTerms, country: null, category: null, page: page}))
@@ -66,7 +64,6 @@ const Header = () => {
         <nav id='nav'>
 
             <span onClick={handleLogo}>{!auth ? <>News</> : <>N<span>ews</span></>}</span>
-            {auth ? <>
                 <div>
                     <input type='text' value={searchTerms} onChange={(e) => dispatch(handleSearch(e.target.value))} onKeyDown={handleKeyDown} placeholder='Search...' />
                     <button onClick={handleClick}>&#128269;</button>
@@ -92,7 +89,6 @@ const Header = () => {
                         <Link to='/help'><li onClick={() => dispatch(handleSideBar("close"))}>Help Center</li></Link>
                     </ul>
                 </div>
-            </> : <Link id='sign-ul' to='/sign-in'>Sign In</Link>}
 
         </nav >
 

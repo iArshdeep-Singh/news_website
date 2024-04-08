@@ -20,7 +20,6 @@ import ForgotPassword from './components/pages/ForgotPassword'
 import TermsAndConditions from './components/pages/TermsAndConditions'
 import ForgotPasswordOTP from './components/pages/ForgotPasswordOTP'
 import UpdatePassword from './components/pages/UpdatePassord'
-import Private from './components/Private'
 import './App.css'
 
 function App() {
@@ -28,12 +27,10 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route element={<Private />}>
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/edit-profile' element={<EditProfile />} />
           <Route path='/delete' element={<Delete />} />
-        </Route>
         <Route path='/read-more/:id' element={<ReadMore />} />
         <Route path='/request-failed' element={<RequestFailed />} />
         <Route path='/intro' element={<Intro />} />

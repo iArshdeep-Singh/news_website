@@ -4,7 +4,7 @@ import axios from 'axios'
 export const userData = createAsyncThunk("userData", async (token, {rejectWithValue}) => {
     try
     {
-        const res = await axios.get(`http://127.0.0.1:2000/user/${token}`)
+        const res = await axios.get(`news-website-nine-virid.vercel.app/user/${token}`)
 
         return res.data
 

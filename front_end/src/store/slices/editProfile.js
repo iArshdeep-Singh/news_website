@@ -4,7 +4,7 @@ import axios from 'axios'
 export const updateProfile = createAsyncThunk('updateProfile', async ({token, form}, {rejectWithValue}) => {
     try
     {
-        const res = await axios.patch(`https://news-website-nine-virid.vercel.app/user/${token}`, form, {
+        const res = await axios.patch(`http://127.0.0.1:2000/user/${token}`, form, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

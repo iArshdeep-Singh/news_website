@@ -7,7 +7,7 @@ const username_pattern = /^[a-zA-Z0-9_]{6,15}$/
 export const signUpAPI = createAsyncThunk("signUpAPI", async (formData, {rejectWithValue}) => {
     try
     {
-        const res = await axios.post(`news-website-nine-virid.vercel.app/user/sign-up`, formData)
+        const res = await axios.post(`https://news-website-nine-virid.vercel.app/user/sign-up`, formData)
 
         return res.data
 

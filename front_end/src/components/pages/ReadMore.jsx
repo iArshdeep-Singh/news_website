@@ -17,6 +17,7 @@ const ReadMore = () => {
 
     const i = news?.data?.[id]
     const {activeLink} = news
+    
     useEffect(() => {
 
         hanldeData()

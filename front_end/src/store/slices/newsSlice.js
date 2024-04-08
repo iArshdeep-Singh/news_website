@@ -16,7 +16,7 @@ export const newsData = createAsyncThunk("newsData", async ({key, query, endpoin
         }
         if (endpoint && country)
         {
-            console.log(country, "--country")
+
             if (endpoint === 'top-headlines')
             {
                 const res = await axios.get(`https://newsapi.org/v2/${endpoint}?country=${country}&pageSize=25&page=${page}&apiKey=${key[randomIndex]}`)
@@ -29,7 +29,7 @@ export const newsData = createAsyncThunk("newsData", async ({key, query, endpoin
 
         } else if (endpoint && category)
         {
-            console.log(category, "--category")
+
             if (endpoint === 'top-headlines')
             {
 
@@ -66,7 +66,7 @@ export const newsData = createAsyncThunk("newsData", async ({key, query, endpoin
             }
         } else if (endpoint)
         {
-            console.log(endpoint, "--endpoint")
+
             const customQuery = 'all'
             const res = await axios.get(`https://newsapi.org/v2/${endpoint}?q=${customQuery}&language=en&pageSize=25&page=${page}&apiKey=${key[randomIndex]}`)
             return res.data.articles

@@ -14,8 +14,6 @@ const UpdatePassword = () => {
     const {isChecked, password, data, loading} = useSelector(state => state.updatePassword)
     const email = localStorage.getItem("email")
 
-    console.log(password, "--password")
-
     useEffect(() => {
         if (data?.success)
         {

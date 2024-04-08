@@ -6,7 +6,6 @@ export const updatePasswordAPI = createAsyncThunk("updatePasswordAPI", async ({e
     {
         const res = await axios.patch(`http://127.0.0.1:2000/user/update-password`, {password, email})
 
-        console.log(res.data, "--data")
         return res.data
 
     } catch (error)

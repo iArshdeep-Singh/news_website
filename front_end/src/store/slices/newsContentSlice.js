@@ -11,7 +11,6 @@ export const newsContent = createAsyncThunk("newsContnet", async (url, {rejectWi
 
     } catch (error)
     {
-        // alert('Something went wrong!!')
         return rejectWithValue(error)
     }
 })

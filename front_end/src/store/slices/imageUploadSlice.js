@@ -10,7 +10,6 @@ export const uploadImage = createAsyncThunk('uploadImage', async ({formData, tok
             }
         })
 
-        console.log(res.data, "--Respones")
         return res.data
 
     } catch (error)

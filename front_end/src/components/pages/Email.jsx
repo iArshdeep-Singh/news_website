@@ -16,13 +16,10 @@ const Email = () => {
 
     const token = localStorage.getItem("user")
 
-    console.log(email, "--email")
-    console.log(data, "--data")
-
     useEffect(() => {
         if (next === 0)
         {
-            // navigate('/sign-up')
+            navigate('/sign-up')
         }
     }, [])
 
@@ -57,7 +54,7 @@ const Email = () => {
 
                         <p>Adding an email is beneficial for you. It helps in recovering your password if you forget it in the future. For now, you can skip adding an email.<br /><b style={{position: "absolute", left: "0", right: "0", color: "tomato"}}>{data?.message}</b></p>
                         <div className='email-form-group'>
-                            <input type='username' name='email' onChange={handleForm} placeholder='email' />
+                            <input type='username' name='email' value={email} onChange={handleForm} placeholder='email' />
                             <label className='email-form-label'>Email</label>
                             <div className='validation-message'>{validation ? validation : ""}</div>
                         </div>

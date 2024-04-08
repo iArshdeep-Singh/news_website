@@ -1,6 +1,6 @@
 import {Link, useNavigate} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
-import {forgotOTP_API, setOTP, setTime} from '../../store/slices/forgotPasswordOTP'
+import {forgotOTP_API, setOTP} from '../../store/slices/forgotPasswordOTP'
 import {useEffect, useRef} from 'react'
 import {setNext} from '../../store/slices/forgotPassword'
 import Spinner from '../Spinner'
@@ -11,15 +11,10 @@ const ForgotPasswordOTP = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const {otp, time, data, loading} = useSelector((state) => state.forgotOTP)
+    const {otp, data, loading} = useSelector((state) => state.forgotOTP)
     const {iNext} = useSelector((state) => state.forgot)
     const inputRef = useRef([])
     const email = localStorage.getItem("email")
-
-
-    console.log(otp, "--OTP")
-    console.log(time, "--Time")
-    console.log(data, "--Data")
 
 
     useEffect(() => {

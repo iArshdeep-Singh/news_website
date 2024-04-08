@@ -9,11 +9,6 @@ const TermsAndConditions = () => {
 
     const dispatch = useDispatch()
     const [isChecked, setIsChecked] = useState(false)
-    const {formData} = useSelector((state) => state.signUp)
-    const {imageData} = useSelector((state) => state.image)
-
-    console.log(imageData, formData, "---ksk")
-
 
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked)

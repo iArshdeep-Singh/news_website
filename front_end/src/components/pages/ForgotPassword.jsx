@@ -11,9 +11,6 @@ const ForgotPassword = () => {
     const dispatch = useDispatch()
     const {data, email, loading, iNext} = useSelector((state) => state.forgot)
 
-    console.log(email, "---email")
-    console.log(data, "---email")
-
     useEffect(() => {
         if (data?.success && iNext)
         {
@@ -44,7 +41,7 @@ const ForgotPassword = () => {
 
                         <p>Enter your registered email to recover your password.<br /><b style={{position: "absolute", left: "0", right: "0", color: "tomato"}}>{data?.message}</b></p>
                         <div className='email-form-group'>
-                            <input type='username' name='email' onChange={handleForm} placeholder='email' />
+                            <input type='username' name='email' value={email} onChange={handleForm} placeholder='email' />
                             <label className='email-form-label'>Email</label>
                             <div className='validation-message'></div>
                         </div>

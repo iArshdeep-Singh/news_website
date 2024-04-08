@@ -17,18 +17,11 @@ const EditProfile = () => {
     const loading = useSelector((state) => state.user.loading)
     const {formData, data, image} = useSelector((state) => state.edit)
 
-    console.log(formData, "--formData")
-
     const user = d?.user
 
     const name = data?.name
     const username = data?.username
     const success = data?.success
-
-
-    console.log(data, "--Data")
-    console.log(image, "--IMGData")
-
 
     const token = localStorage.getItem("user")
 

@@ -11,7 +11,7 @@ const OTPverification = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const {otp, time, data, loading} = useSelector((state) => state.otp)
+    const {otp, data, loading} = useSelector((state) => state.otp)
     const email = useSelector((state) => state.user?.data?.user?.email)
     const {iNext} = useSelector((state) => state.email)
     const inputRef = useRef([])
@@ -23,8 +23,8 @@ const OTPverification = () => {
 
 
     useEffect(() => {
-        // if (iNext === 0)
-        //     navigate('/email-verification')
+        if (iNext === 0)
+            navigate('/email-verification')
     }, [iNext])
 
 
@@ -70,7 +70,6 @@ const OTPverification = () => {
             return null
 
         dispatch(otpAPI({otp, token}))
-        console.log("ouweoruoweuoriuweu")
     }
 
     return (

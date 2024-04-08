@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import {useEffect} from 'react'
-import {setPopup, userData} from '../../store/slices/profileDataSlice'
+import {setPopXL, setPopup, userData} from '../../store/slices/profileDataSlice'
 import {setNull} from '../../store/slices/editProfile'
 import PopupModal from '../PopupModal'
 import x from '../images/profile.jpg'
@@ -35,10 +35,9 @@ const Profile = () => {
     }, [])
 
 
-    console.log(data, "--user data")
-
     const logout = () => {
         dispatch(setPopup(true))
+        dispatch(setPopXL(true))
     }
 
     return (
@@ -46,7 +45,7 @@ const Profile = () => {
             {loading ? <Spinner /> :
                 <div id='profile-container'>
 
-                    <PopupModal message={"Are you sure?"} bt={"Yes"} link={'/intro'} handler={setPopup} />
+                    <PopupModal message={"Are you sure?"} bt={"Yes"} link={'/intro'} handler={setPopup} handlerX={setPopXL} />
                     <div id='first-container'>
                         {image ? <img src={`data:image;base64,${image}`} alt='profile' />
                             : <img src={x} alt='profile' />}

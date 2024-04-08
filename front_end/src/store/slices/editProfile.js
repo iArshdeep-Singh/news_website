@@ -10,7 +10,6 @@ export const updateProfile = createAsyncThunk('updateProfile', async ({token, fo
             }
         })
 
-        console.log(res.data, "---Response")
         return res.data
 
 

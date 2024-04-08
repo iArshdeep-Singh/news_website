@@ -8,7 +8,6 @@ export const deleteAPI = createAsyncThunk("deleteAPI", async ({token, password},
             data: {password}
         })
 
-        console.log(res.data, "--data")
         return res.data
 
     } catch (error)

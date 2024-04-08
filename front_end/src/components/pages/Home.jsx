@@ -15,14 +15,12 @@ const Home = () => {
     const dispatch = useDispatch()
     const {data, loading, error, switchTo, activeLink} = useSelector((state) => state.news)
     const {page, query} = activeLink
-    console.log(activeLink.page, "--Page")
-    console.log(switchTo, "--S")
 
 
     useEffect(() => {
         if (error)
         {
-            // navigate('/request-failed')
+            navigate('/request-failed')
         }
         window.scrollTo({
             top: 0,

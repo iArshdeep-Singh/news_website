@@ -60,7 +60,6 @@ const Header = () => {
     let linkStyle = {
         borderBottom: "0.125vw solid #cc0000",
         color: "#cc0000",
-        // backgroundColor: "black"
     }
 
     return (
@@ -72,7 +71,7 @@ const Header = () => {
                     <input type='text' value={searchTerms} onChange={(e) => dispatch(handleSearch(e.target.value))} onKeyDown={handleKeyDown} placeholder='Search...' />
                     <button onClick={handleClick}>&#128269;</button>
                 </div>
-                {/* style={error ? {visibility: "hidden"} : {}} */}
+
                 <div id='links-container'>
                     <div id='links' onClick={handleNav}>
                         <Link href="#" style={country === 'in' ? linkStyle : {}} onClick={() => dispatch(switchLink({endpoint: "everything", country: 'in', category: null, query: null, page: page}))}>India</Link>

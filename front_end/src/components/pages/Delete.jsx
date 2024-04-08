@@ -12,9 +12,6 @@ const Delete = () => {
     const {isChecked, password, data, popupX} = useSelector(state => state.delete)
     const token = localStorage.getItem("user")
 
-
-    console.log(password, "--password")
-
     useEffect(() => {
         if (data?.success && !popupX)
         {

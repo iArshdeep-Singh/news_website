@@ -270,9 +270,6 @@ const update = async (req, res) => {
 
         console.log("Profile updated successfully..".bgBlue.white)
         return res.status(200).send({
-            // Headers: {
-            //     "content-type": "json/application"
-            // },
             success: true,
             message: "Profile updated.",
         })
@@ -347,7 +344,18 @@ const sendOTP = async (req, res) => {
         {
             return res.status(200).send({
                 success: false,
-                email: "Email is required."
+                message: "Email is required."
+            })
+        }
+
+        const user = await User.findOne({email})
+
+        if (user)
+        {
+            console.log("Already registered email.".bgRed.white)
+            return res.status(200).send({
+                success: false,
+                message: "This email is already used."
             })
         }
 
@@ -369,14 +377,17 @@ const sendOTP = async (req, res) => {
             to: email,
             subject: "OTP Verification",
             html: `<h1>NEWS APP</h1><h3>Your OTP for verification is <b style="color:blue;">${otp}</b></h3>`
-        }, (error, info) => {
+        }, async (error, info) => {
             if (error)
             {
+                await User.deleteOne({email})
+
                 console.log(`-->${error}`.bgRed.white, error)
                 return res.status(200).json({
                     success: false,
                     message: "OTP isn't sent. Please check your email and try again.",
                 })
+
 
             } else
             {

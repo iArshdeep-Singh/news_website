@@ -16,9 +16,6 @@ const UploadPhoto = () => {
     const message = data?.message
     const image = imageData?.image
 
-    console.log(imageData, "--Image")
-    console.log(data, "--DataImage")
-
     const handleImage = () => {
         inputRef.current.click()
         dispatch(setNull())

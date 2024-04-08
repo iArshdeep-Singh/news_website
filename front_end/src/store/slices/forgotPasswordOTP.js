@@ -16,7 +16,6 @@ export const forgotOTP_API = createAsyncThunk('forgotOTP_API', async ({otp, emai
 
 const initialState = {
     otp: new Array(4).fill(""),
-    time: 0,
     data: null,
     loading: false,
     error: null
@@ -51,5 +50,5 @@ const forgotPasswordOTP = createSlice({
     }
 })
 
-export const {setOTP, setTime} = forgotPasswordOTP.actions
+export const {setOTP} = forgotPasswordOTP.actions
 export default forgotPasswordOTP.reducer

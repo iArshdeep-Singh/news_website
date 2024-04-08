@@ -16,6 +16,7 @@ export const userData = createAsyncThunk("userData", async (token, {rejectWithVa
 
 const initialState = {
     popupXX: false,
+    popupXL: false,
     data: null,
     loading: false,
     error: null
@@ -27,6 +28,9 @@ const profileDataSlice = createSlice({
     reducers: {
         setPopup: (state, action) => {
             state.popupXX = action.payload
+        },
+        setPopXL: (state, action) => {
+            state.popupXL = action.payload
         }
     },
     extraReducers: (builder) => {
@@ -47,5 +51,5 @@ const profileDataSlice = createSlice({
     }
 })
 
-export const {setPopup} = profileDataSlice.actions
+export const {setPopup, setPopXL} = profileDataSlice.actions
 export default profileDataSlice.reducer

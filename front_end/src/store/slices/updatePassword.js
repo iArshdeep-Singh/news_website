@@ -4,7 +4,7 @@ import axios from 'axios'
 export const updatePasswordAPI = createAsyncThunk("updatePasswordAPI", async ({email, password}, {rejectWithValue}) => {
     try
     {
-        const res = await axios.patch(`http://127.0.0.1:2000/user/update-password`, {password, email})
+        const res = await axios.patch(`news-website-nine-virid.vercel.app/user/update-password`, {password, email})
 
         return res.data
 

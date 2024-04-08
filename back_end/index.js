@@ -19,7 +19,7 @@ const urlx = process.env.URLX
 // middlewares
 app.use(express.json())
 app.use(cors({
-    origin: ["https://news-website-frontend-koseryx7y-arshdeepsinghs-projects.vercel.app/intro"],
+    origin: ["https://news-website-frontend-koseryx7y-arshdeepsinghs-projects.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }))

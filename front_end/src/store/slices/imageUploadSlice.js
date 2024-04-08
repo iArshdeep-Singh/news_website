@@ -4,7 +4,7 @@ import axios from "axios"
 export const uploadImage = createAsyncThunk('uploadImage', async ({formData, token}, {rejectWithValue}) => {
     try
     {
-        const res = await axios.patch(`news-website-nine-virid.vercel.app/user/upload-image/${token}`, formData, {
+        const res = await axios.patch(`https://news-website-nine-virid.vercel.app/user/upload-image/${token}`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

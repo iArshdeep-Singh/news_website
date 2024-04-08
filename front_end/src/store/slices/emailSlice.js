@@ -4,7 +4,7 @@ import axios from "axios"
 export const emailAPI = createAsyncThunk('emailAPI', async ({token, email}, {rejectWithValue}) => {
     try
     {
-        const res = await axios.post(`https://news-website-nine-virid.vercel.app/user/send-otp/${token}`, {email})
+        const res = await axios.post(`http://127.0.0.1:2000/user/send-otp/${token}`, {email})
 
         return res.data
 

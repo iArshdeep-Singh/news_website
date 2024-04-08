@@ -4,7 +4,7 @@ import axios from 'axios'
 export const deleteAPI = createAsyncThunk("deleteAPI", async ({token, password}, {rejectWithValue}) => {
     try
     {
-        const res = await axios.delete(`news-website-nine-virid.vercel.app/user/${token}`, {
+        const res = await axios.delete(`https://news-website-nine-virid.vercel.app/user/${token}`, {
             data: {password}
         })
 

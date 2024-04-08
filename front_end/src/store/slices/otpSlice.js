@@ -4,7 +4,7 @@ import axios from "axios"
 export const otpAPI = createAsyncThunk('otpAPI', async ({otp, token}, {rejectWithValue}) => {
     try
     {
-        const res = await axios.post(`news-website-nine-virid.vercel.app/user/verify-otp/${token}`, {otp})
+        const res = await axios.post(`https://news-website-nine-virid.vercel.app/user/verify-otp/${token}`, {otp})
 
         return res.data
     } catch (error)

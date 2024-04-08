@@ -40,7 +40,7 @@ app.use('/', (req, res) => {
 
 // connection
 mongoose
-    .connect(urlx)
+    .connect(url)
     .then(() => {
         console.log(`|---APP CONNECTED TO DATABASE---|`.bgGreen.black)
 

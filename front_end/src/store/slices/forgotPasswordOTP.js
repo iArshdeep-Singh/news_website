@@ -4,7 +4,7 @@ import axios from "axios"
 export const forgotOTP_API = createAsyncThunk('forgotOTP_API', async ({otp, email}, {rejectWithValue}) => {
     try
     {
-        const res = await axios.post(`news-website-nine-virid.vercel.app/user/forgot-password-otp`, {otp, email})
+        const res = await axios.post(`https://news-website-nine-virid.vercel.app/user/forgot-password-otp`, {otp, email})
 
         return res.data
     } catch (error)

@@ -4,7 +4,7 @@ import axios from "axios"
 export const signInAPI = createAsyncThunk("signInAPI", async (formData, {rejectWithValue}) => {
     try
     {
-        const res = await axios.post(`http://127.0.0.1:2000/user/sign-in`, formData)
+        const res = await axios.post(`https://news-website-sable.vercel.app/user/sign-in`, formData)
 
         return res.data
 

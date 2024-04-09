@@ -4,7 +4,7 @@ import axios from "axios"
 export const forgotAPI = createAsyncThunk('forgotAPI', async (email, {rejectWithValue}) => {
     try
     {
-        const res = await axios.post(`http://127.0.0.1:2000/user/forgot-password`, {email})
+        const res = await axios.post(`https://news-website-sable.vercel.app/user/forgot-password`, {email})
 
         return res.data
 

@@ -5,7 +5,7 @@ import axios from 'axios'
 export const newsContent = createAsyncThunk("newsContnet", async (url, {rejectWithValue}) => {
     try
     {
-        const res = await axios.post(`http://127.0.0.1:2000/news-content`, {url})
+        const res = await axios.post(`https://news-website-sable.vercel.app/news-content`, {url})
 
         return res.data
 
